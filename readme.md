@@ -8,7 +8,9 @@
  
 Step2:  After that, I created docker image and uploaded in my docker hub account. 
 
-Step3: After that, I wrote docker-compose file to create docker images on ec2.instance
+Step3: After that, I wrote docker-compose file to create docker images on ec2 instance
+
+Please check docker-compose code here [docker-compose.yml file](docker-compose.yml)
 
 
 Step3:  After that, I wrote terraform code to create and ec2 instance and download required packages and also wrote user-data.sh script.  I also include the docker-compose file in my terraform code. 
