@@ -1,0 +1,53 @@
+# variables.tf
+variable "access_key" {
+    type = string
+    default = "AKIAQR72IAJCELMZEKU3"
+    }
+
+variable "secret_key" { 
+    type = string
+    default= "k8rB7vUmrATOxkRqaaqOOGKcd2L9DYoXPWMEoPdO"
+}
+
+variable "region" {
+    type = string
+   default = "us-east-1"
+}
+variable "availabilityZone" {
+    type = string
+   default = "us-east-1a"
+}
+variable "instanceType" {
+    type = string
+   default = "t2.micro"
+}
+variable "keyName" {
+    type = string
+   default ="servian2"
+}
+variable "keyPath" {
+    type = string
+   default = "servian2.pem"
+}
+variable "subnet" {
+    type = string
+   default = "subnet-c31733ed"
+}
+variable "securityGroups" {
+   type = list
+   default =["sg-0dca04e4a1d9abbb2"]
+}
+variable "instanceName" {
+    type = string
+   default ="servian-tech-challenge"
+}
+# ami-0b898040803850657 is the free Amazon Linux 2 AMI
+# for the us-east-1 region. Amazon Linux 2 
+# is a downstream version of Red Hat Enterprise Linux / 
+# Fedora / CentOS. It is analogous to RHEL 7.
+variable "amis" {
+   default = {
+     "us-east-1" = "ami-0cff7528ff583bf9a"
+   }
+}
+# end of variables.tf
