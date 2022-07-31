@@ -1,0 +1,22 @@
+version: "3.5"
+services:
+  tech_app:
+         image: ankur2807/tech:latest
+         entrypoint: ["/bin/sh","-c", ./TechChallengeApp updatedb && ./TechChallengeApp serve]
+         depends_on:
+            - db
+         ports:
+           - 3000:3000
+         
+  db:
+   image: postgres
+   ports:
+      - '5432:5432'
+   volumes: 
+      - db:/var/lib/postgresql/data
+   environment:
+       POSTGRES_USER: postgres
+       POSTGRES_PASSWORD: changeme
+volumes:
+  db:
+    driver: local
