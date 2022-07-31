@@ -3,7 +3,7 @@
 **Steps to create EC2 instance using terraform**
 
 
-I have created a terraform code with user-data.sh script.
-After ec2 created, I installed docker, docker-compose and git packages in the system.
-
-
+First I changed the config in conf.toml file and then I wrote code to create custom docker image of app and postgres db and pushed the conf.toml with new values.
+After that, I pushed my docker image to my docker hub account.
+After that, I wrote terraform code with user-data.sh script.
+More details about the application can be found in the [Terraform Code](user-data.sh)
